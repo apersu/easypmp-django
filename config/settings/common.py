@@ -32,6 +32,7 @@ DJANGO_APPS = (
     # 'django.contrib.humanize',
 
     # Admin
+    'flat',
     'django.contrib.admin',
 )
 THIRD_PARTY_APPS = (
@@ -45,6 +46,7 @@ THIRD_PARTY_APPS = (
 LOCAL_APPS = (
     'easypmp-django.users',  # custom users app
     # Your stuff: custom apps go here
+    'easypmp-django.polls',
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -110,10 +112,10 @@ DATABASES['default']['ATOMIC_REQUESTS'] = True
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
 # In a Windows environment this must be set to your system time zone.
-TIME_ZONE = 'utc-3'
+TIME_ZONE = 'America/Bahia'
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#language-code
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#site-id
 SITE_ID = 1

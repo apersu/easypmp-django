@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}{% load i18n %}
+{% block title %}Polls{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    <h2>Polls</h2>
+    
+    {% if question_list %}
+	    <div class="list-group">
+	        {% for question in question_list %}
+	          <a href="{% url 'polls:detail' question.id %}" class="list-group-item">
+	            <h4 class="list-group-item-heading">{{ question.question_text }}</h4>            
+	          </a>
+	        {% endfor %}
+	    </div>
+    {% else %}
+    	<p>No polls are available.</p>
+	{% endif %}
+
+{% endblock content %}

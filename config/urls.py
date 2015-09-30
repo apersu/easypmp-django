@@ -16,6 +16,7 @@ urlpatterns = [
 
     # User management
     url(r'^users/', include("easypmp-django.users.urls", namespace="users")),
+    url(r'^polls/', include("easypmp-django.polls.urls", namespace="polls")),
     url(r'^accounts/', include('allauth.urls')),
 
     # Your stuff: custom urls includes go here
